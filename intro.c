@@ -5,7 +5,7 @@ int main() {
    scanf("%s", name);
    printf("What is your favorite number?\n");
    int favenumber;
-   scanf("%d", &f);
+   scanf("%d", &favenumber);
    int numtwo = favenumber*2;
    printf("Hi %s",name);
    printf("! Your favorite number doubled is %d", numtwo);
