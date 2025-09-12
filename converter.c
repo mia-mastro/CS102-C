@@ -30,7 +30,8 @@ int main() {
     scanf("%lf", &input);
 
     if(input < 0){
-        input = input * -1;
+        printf("You entered a negative number!\n");
+        return 0;
     }
     
    double meters = kilometersToMeters(input);
