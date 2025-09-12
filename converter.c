@@ -29,6 +29,10 @@ int main() {
     printf("Welcome to the Unit Converter!\nEnter a distance in kilometers:\n");
     scanf("%lf", &input);
 
+    if(input < 0){
+        input = input * -1;
+    }
+    
    double meters = kilometersToMeters(input);
    double centimeters = kilometersToCentimeters(input);
    double miles = kilometersToMiles(input); 
