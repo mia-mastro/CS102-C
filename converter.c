@@ -9,7 +9,7 @@ double kilometersToCentimeters(double km){
 
 double kilometersToMiles(double km){
     double temp = km * 100000;
-    temp = temp * 2.54;
+    temp = temp / 2.54;
     temp = temp / 12;
     temp = temp / 5280;
     return temp;
