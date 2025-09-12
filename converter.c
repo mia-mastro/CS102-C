@@ -36,8 +36,8 @@ int main() {
    double meters = kilometersToMeters(input);
    double centimeters = kilometersToCentimeters(input);
    double miles = kilometersToMiles(input); 
-   double feet = milesToFeet(input);
-   double inches = milesToInches(input);
+   double feet = milesToFeet(miles);
+   double inches = milesToInches(miles);
 
    printf("Conversions for %lf km:\n", input);
    printf("Meters:\t\t%lf\n", meters);
