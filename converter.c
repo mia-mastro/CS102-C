@@ -1,14 +1,14 @@
 #include <stdio.h>
 double kilometersToMeters(double km){
-    return km * 100;
+    return km * 1000;
 }
 
 double kilometersToCentimeters(double km){
-    return km * 10000;
+    return km * 100000;
 }
 
 double kilometersToMiles(double km){
-    double temp = km * 10000;
+    double temp = km * 100000;
     temp = temp * 2.54;
     temp = temp / 12;
     temp = temp / 5280;
