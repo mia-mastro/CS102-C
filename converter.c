@@ -8,8 +8,7 @@ double kilometersToCentimeters(double km){
 }
 
 double kilometersToMiles(double km){
-    double temp = km * 100000 / 2.54 / 12 / 5280;    // km --> cm --> in --> ft --> mi
-    return temp;
+    return km * 100000 / 2.54 / 12 / 5280;    // km --> cm --> in --> ft --> mi
 }
 
 double milesToFeet(double mi){
