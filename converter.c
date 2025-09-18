@@ -1,26 +1,22 @@
 #include <stdio.h>
 double kilometersToMeters(double km){
-    return km * 1000;
+    return km * 1000;    // km --> m
 }
 
 double kilometersToCentimeters(double km){
-    return km * 100000;
+    return km * 100000;    // km --> cm
 }
 
 double kilometersToMiles(double km){
-    double temp = km * 100000;
-    temp = temp / 2.54;
-    temp = temp / 12;
-    temp = temp / 5280;
-    return temp;
+    return km * 100000 / 2.54 / 12 / 5280;    // km --> cm --> in --> ft --> mi
 }
 
 double milesToFeet(double mi){
-    return mi * 5280;
+    return mi * 5280;    // mi --> ft
 }
 
 double milesToInches(double mi){
-    return mi * 5280 * 12;
+    return mi * 5280 * 12;    // mi --> ft --> in
 }
 
 int main() {
@@ -29,6 +25,7 @@ int main() {
     printf("Welcome to the Unit Converter!\nEnter a distance in kilometers:\n");
     scanf("%lf", &input);
 
+    // check for negative distance (protect against bad input breaking the code or giving wrong/irrelevant answers)
     if(input < 0){
         printf("You entered a negative number!\n");
         return 0;
@@ -40,12 +37,8 @@ int main() {
    double feet = milesToFeet(miles);
    double inches = milesToInches(miles);
 
-   printf("Conversions for %lf km:\n", input);
-   printf("Meters:\t\t%lf\n", meters);
-   printf("Centimeters:\t%lf\n", centimeters);
-   printf("Miles:\t\t%lf\n",miles);
-   printf("Feet:\t\t%lf\n", feet);
-   printf("Inches:\t\t%lf\n", inches);
+    // print all conversions
+   printf("Conversions for %lf km:\n----------------------------\nMeters:\t\t%lf\nCentimeters:\t%lf\nMiles:\t\t%lf\nFeet:\t\t%lf\nInches:\t\t%lf\n", input, meters, centimeters, miles, feet, inches);
 
    return 0;
 }
