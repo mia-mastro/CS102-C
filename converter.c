@@ -38,7 +38,7 @@ int main() {
    double inches = milesToInches(miles);
 
     // print all conversions
-   printf("Conversions for %lf km:\nMeters:\t\t%lf\nCentimeters:\t%lf\nMiles:\t\t%lf\nFeet:\t\t%lf\nInches:\t\t%lf\n", input, meters, centimeters, miles, feet, inches);
+   printf("Conversions for %lf km:\n----------------------------\nMeters:\t\t%lf\nCentimeters:\t%lf\nMiles:\t\t%lf\nFeet:\t\t%lf\nInches:\t\t%lf\n", input, meters, centimeters, miles, feet, inches);
 
    return 0;
 }
