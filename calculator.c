@@ -17,9 +17,10 @@ double divide(double a, double b){
 }
 
 double power(double a, double b){
-	while(b > 0){
-		a *= a;
-		b - 1;
+	double c = a;
+	while(b > 1){
+		a *= c;
+		b -= 1;
 	}
 	return a;
 }
