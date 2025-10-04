@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+//right triangle function: print asterisks increasing from 1 to (size) per line for (size) lines
 void rightTriangle(int size){
 	printf("Right Triangle:");
 	int temp = 0;
@@ -12,6 +13,7 @@ void rightTriangle(int size){
 	}
 }
 
+//upside down triangle function: print asterisks decreasing from (size) to 1 per line for (size) lines
 void upsideDownTriangle(int size){
 	printf("Upside Down Triangle:\n");
 	int temp = size;
@@ -24,6 +26,7 @@ void upsideDownTriangle(int size){
 	}	
 }
 
+//diamond function: print spaces to center the middle of the diamond, then print asterisks in groups of 2 for (size) lines
 void diamond(int size){
 	printf("Diamond:\n");
 	for(int i = 1; i <= size; i ++){
@@ -48,6 +51,7 @@ void diamond(int size){
 
 }
 
+//pascal's triangle function: print spaces to center pascal's triangle, then print each number as the sum of the numbers above it
 void pascal(int size){
 	printf("Pascal's Triangle:\n");
 	for(int i = 0; i < size; i ++){
@@ -64,6 +68,7 @@ void pascal(int size){
 	}
 }
 
+//multiplication table function: print the number times the first number in the line
 void multiplicationTable(int size){
 	printf("Multiplication Table:\n");
 	for(int i = 1; i <= size; i ++){
@@ -75,6 +80,7 @@ void multiplicationTable(int size){
 	
 }
 
+//checkerboard function: if we're on an even index of the line (every other character), print an asterisk, otherwise print a space
 void checkerboard(int size){
 	printf("Checkerboard:\n");
 	for(int i = 0; i < size; i++){
@@ -90,6 +96,7 @@ void checkerboard(int size){
 }
 
 int main(){
+	//declare ints for the number corresponding to the pattern and the size of the pattern, and a char to keep track of if it will repeat
 	int patternNum, patternSize;
 	char next;
 
@@ -99,7 +106,7 @@ int main(){
 	printf("Enter size:\n");
 	scanf("%d", &patternSize);
 
-	//determine which pattern to print and print it
+	//determine which pattern to print and print it based on the given number
 	switch(patternNum){
 		case 1:{
 			rightTriangle(patternSize); 
@@ -126,12 +133,13 @@ int main(){
 	}
 	printf("Print another pattern? (y/n):\n");
 	scanf(" %c", &next);	
-	
+
+	//calls main() again if y is entered, otherwise ends the program
 	if(next == 'y'){
 		main();
-	}	
-	
-	printf("Program end. Thanks for using the pattern generator!\n");
-
+	}else{
+		printf("Program end. Thanks for using the pattern generator!\n");
+	}
+		
 	return 0;
 }
