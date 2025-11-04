@@ -36,6 +36,7 @@ void removeSong(char *pTitle) {
 	if (totalSongs == 0) {
 		printf("Playlist is empty!\n");
 		return;
+	}
 	for (int i = 0; i < totalSongs; i++) {
 		if (strcmp(playlist[i].title, pTitle) == 0) {
 			for (int j = i; j < totalSongs - 1; j++) {
@@ -49,11 +50,11 @@ void removeSong(char *pTitle) {
 				currentlyPlaying = 0;
 			}
 			return;
-			}
 		}
-	printf("Song not found!\n");
 	}
+	printf("Song not found!\n");
 }
+
 
 void nextSong() {
 	if (totalSongs == 0) {
