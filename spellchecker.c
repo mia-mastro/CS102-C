@@ -2,12 +2,14 @@
 #include <stdlib.h>
 #include <string.h>
 
+//struct for word node with pointers to leftmost and rightmost characters
 struct WordNode {
 	char word[50];
 	struct WordNode *left;
 	struct WordNode *right;
 };
 
+//create new struct for word
 struct WordNode *saveWord(struct WordNode *root, char *word) {
 	if (root == NULL) {
 		struct WordNode *newNode = malloc(sizeof(struct WordNode));
@@ -24,6 +26,7 @@ struct WordNode *saveWord(struct WordNode *root, char *word) {
 	return root;
 }
 
+//is the word in the dictionary?
 struct WordNode *findWord(struct WordNode *root, char *word) {
 	if (root == NULL)
 		return NULL;
@@ -53,7 +56,7 @@ int main() {
 	while (1) {
 		printf("\n> Enter a word to check (or 'quit' to exit): ");
 		scanf("%49s", input);
-
+		
 		if (strcmp(input, "quit") == 0) {
 			printf("> Goodbye!\n");
 			break;
